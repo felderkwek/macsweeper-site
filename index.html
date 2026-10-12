@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mac Sweeper: remove an app and the files it leaves behind</title>
+  <meta name="description" content="Mac Sweeper finds the caches, preferences and support files an app leaves in your Library, and moves them to the Trash.">
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <a class="brand" href="index.html">
+        <img src="icon.png" alt="" onerror="this.style.display='none'">
+        <span>Mac Sweeper</span>
+      </a>
+      <nav aria-label="Main">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Remove an app. Remove what it left behind.</h1>
+        <p class="lead">Drop an app onto Mac Sweeper. It finds the caches, preferences and support files that app scattered across your Library, lists every one, and moves them to the Trash when you say so.</p>
+
+        <div class="tiles" aria-hidden="true">
+          <div class="tile" style="--i:0">
+            <div class="art">
+              <svg viewBox="0 0 72 72" width="68" height="68">
+                <defs>
+                  <linearGradient id="appgrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#9aa7ff"/>
+                    <stop offset="1" stop-color="#5a5fe0"/>
+                  </linearGradient>
+                </defs>
+                <rect x="4" y="4" width="64" height="64" rx="15" fill="url(#appgrad)"/>
+                <circle cx="36" cy="36" r="14" fill="none" stroke="#fff" stroke-width="5" opacity=".9"/>
+              </svg>
+            </div>
+            <span class="name">Example.app</span>
+          </div>
+
+          <div class="tile" style="--i:1">
+            <div class="art">
+              <svg viewBox="0 0 96 80" width="76" height="64">
+                <path d="M6 12a6 6 0 0 1 6-6h24l8 8h40a6 6 0 0 1 6 6v48a6 6 0 0 1-6 6H12a6 6 0 0 1-6-6z" fill="#4aa3e8"/>
+                <path d="M6 24a6 6 0 0 1 6-6h72a6 6 0 0 1 6 6v44a6 6 0 0 1-6 6H12a6 6 0 0 1-6-6z" fill="#7cc4ff"/>
+                <text x="48" y="52" text-anchor="middle" font-size="15" font-weight="700" fill="#324e6c" font-family="-apple-system, Helvetica, Arial, sans-serif">Cache</text>
+              </svg>
+            </div>
+            <span class="name">com.example.app</span>
+          </div>
+
+          <div class="tile" style="--i:2">
+            <div class="art">
+              <svg viewBox="0 0 96 80" width="76" height="64">
+                <path d="M6 12a6 6 0 0 1 6-6h24l8 8h40a6 6 0 0 1 6 6v48a6 6 0 0 1-6 6H12a6 6 0 0 1-6-6z" fill="#4aa3e8"/>
+                <path d="M6 24a6 6 0 0 1 6-6h72a6 6 0 0 1 6 6v44a6 6 0 0 1-6 6H12a6 6 0 0 1-6-6z" fill="#7cc4ff"/>
+                <text x="48" y="44" text-anchor="middle" font-size="14" font-weight="700" fill="#324e6c" font-family="-apple-system, Helvetica, Arial, sans-serif">App</text>
+                <text x="48" y="60" text-anchor="middle" font-size="14" font-weight="700" fill="#324e6c" font-family="-apple-system, Helvetica, Arial, sans-serif">Support</text>
+              </svg>
+            </div>
+            <span class="name">Example</span>
+          </div>
+
+          <div class="tile" style="--i:3">
+            <div class="art">
+              <svg viewBox="0 0 96 80" width="76" height="64">
+                <path d="M6 12a6 6 0 0 1 6-6h24l8 8h40a6 6 0 0 1 6 6v48a6 6 0 0 1-6 6H12a6 6 0 0 1-6-6z" fill="#4aa3e8"/>
+                <path d="M6 24a6 6 0 0 1 6-6h72a6 6 0 0 1 6 6v44a6 6 0 0 1-6 6H12a6 6 0 0 1-6-6z" fill="#7cc4ff"/>
+                <text x="48" y="52" text-anchor="middle" font-size="15" font-weight="700" fill="#324e6c" font-family="-apple-system, Helvetica, Arial, sans-serif">Log</text>
+              </svg>
+            </div>
+            <span class="name">Example</span>
+          </div>
+
+          <div class="tile" style="--i:4">
+            <div class="art">
+              <svg viewBox="0 0 72 88" width="62" height="76">
+                <path d="M8 6a6 6 0 0 1 6-6h30l22 22v60a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6z" fill="#f4f4f6"/>
+                <path d="M44 0l22 22H50a6 6 0 0 1-6-6z" fill="#d3d3d9"/>
+                <text x="37" y="70" text-anchor="middle" font-size="11" fill="#8a8a93" font-family="-apple-system, Helvetica, Arial, sans-serif">PLIST</text>
+              </svg>
+            </div>
+            <span class="name">com.example.app.plist</span>
+          </div>
+        </div>
+
+        <p><a class="button" href="https://apps.apple.com/">Get Mac Sweeper on the Mac App Store</a></p>
+      </section>
+
+      <section>
+        <h2>How it works</h2>
+        <ol>
+          <li>Open Mac Sweeper and click <strong>Allow Access to Library…</strong>. Choose the Library folder inside your home folder. macOS asks again each time you open the app.</li>
+          <li>Drop an app onto the window. Mac Sweeper lists the app and every leftover file it finds.</li>
+          <li>Check the list, then click <strong>Move to Trash</strong>.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>What to expect</h2>
+        <p>Mac Sweeper runs inside the Mac App Store sandbox, so it can only look where you allow it. That keeps your Mac safe. It also means a few things are out of reach: items owned by macOS itself, such as apps installed from the App Store, can't be removed by Mac Sweeper. Remove those in Finder.</p>
+        <p>Everything Mac Sweeper removes goes to the Trash first, so you can put it back.</p>
+      </section>
+
+      <section>
+        <h2>Private by design</h2>
+        <p>Mac Sweeper has no accounts, no analytics and no internet connection. The list of files it finds never leaves your Mac. Read the <a href="privacy.html">privacy policy</a>.</p>
+        <p>Questions or problems? Visit the <a href="support.html">support page</a>.</p>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span class="copy">&copy; 2026 Your Name</span>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </footer>
+  </div>
+</body>
+</html>

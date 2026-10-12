@@ -1,0 +1,213 @@
+/* Mac Sweeper website. No external fonts, scripts or trackers. */
+
+:root {
+  color-scheme: dark light;
+  --bg: #1c1c1e;
+  --panel: #262629;
+  --line: #38383d;
+  --text: #ececef;
+  --muted: #a1a1a9;
+  --link: #8ec9ff;
+  --button: #4aa3e8;
+  --button-hover: #7cc4ff;
+  --button-text: #061625;
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f6f6f8;
+    --panel: #ffffff;
+    --line: #dcdce1;
+    --text: #1d1d1f;
+    --muted: #5f5f68;
+    --link: #0b63c4;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 var(--font);
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a { color: var(--link); }
+
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---- Header and footer ---- */
+
+.site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.site nav a {
+  margin-left: 22px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site nav a:hover { color: var(--text); }
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin-top: 48px;
+  padding: 24px 0 40px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.foot a { color: var(--muted); }
+.foot a:hover { color: var(--text); }
+.foot .copy { margin-right: auto; }
+
+/* ---- Text ---- */
+
+h1, h2 {
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 6.5vw, 3.1rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 1.3rem;
+  font-weight: 650;
+}
+
+p { margin: 0 0 16px; }
+
+.lead {
+  max-width: 34em;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+.meta { color: var(--muted); font-size: 15px; }
+
+ol, ul { margin: 0 0 16px; padding-left: 1.3em; }
+li { margin-bottom: 8px; }
+
+section {
+  padding: 32px 0;
+  border-top: 1px solid var(--line);
+}
+
+.hero {
+  padding: 44px 0 40px;
+  border-top: 0;
+}
+
+/* ---- The row of example files (the one memorable element) ---- */
+
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  margin: 36px 0 28px;
+}
+
+.tile {
+  width: 104px;
+  text-align: center;
+  animation: pop 0.42s cubic-bezier(0.2, 0.9, 0.3, 1.15) both;
+  animation-delay: calc(var(--i) * 80ms);
+}
+
+.tile .art {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 80px;
+}
+
+.tile .name {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+@keyframes pop {
+  from { opacity: 0; transform: scale(0.6); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile { animation: none; }
+}
+
+/* ---- Button ---- */
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: var(--button);
+  color: var(--button-text);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.button:hover { background: var(--button-hover); }
+
+/* ---- Support page ---- */
+
+details {
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+
+details:last-of-type { border-bottom: 1px solid var(--line); }
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+details p { margin: 10px 0 0; color: var(--muted); }

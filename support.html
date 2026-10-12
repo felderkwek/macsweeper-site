@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mac Sweeper support</title>
+  <meta name="description" content="Help for Mac Sweeper: how to use it, common questions, and how to contact the developer.">
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <a class="brand" href="index.html">
+        <img src="icon.png" alt="" onerror="this.style.display='none'">
+        <span>Mac Sweeper</span>
+      </a>
+      <nav aria-label="Main">
+        <a href="support.html" aria-current="page">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Mac Sweeper support</h1>
+        <p class="lead">Need help? Email <a href="mailto:your-email@example.com">your-email@example.com</a>. Please say which macOS version you use and which app you were trying to remove.</p>
+      </section>
+
+      <section>
+        <h2>How to use Mac Sweeper</h2>
+        <ol>
+          <li>Open Mac Sweeper and click <strong>Allow Access to Library…</strong>. Choose the folder named Library inside your home folder. macOS asks again each time you open the app.</li>
+          <li>Drop an app onto the window. Mac Sweeper lists the app and every leftover file it finds.</li>
+          <li>Check the list, then click <strong>Move to Trash</strong>.</li>
+        </ol>
+        <p>Mac Sweeper needs macOS 12 or later.</p>
+      </section>
+
+      <section>
+        <h2>Common questions</h2>
+
+        <details>
+          <summary>Why does Mac Sweeper ask me to choose my Library folder?</summary>
+          <p>Apps from the Mac App Store are sandboxed. They can only see folders you hand them. Your Library folder is where apps keep their caches, preferences and support files, so Mac Sweeper needs your permission to look there. In the folder chooser, you can press Command-Shift-G and type ~/Library to jump straight to it.</p>
+        </details>
+
+        <details>
+          <summary>Why can't Mac Sweeper remove some apps or files?</summary>
+          <p>Items owned by macOS itself, such as apps installed from the App Store, can only be removed with an administrator password, and sandboxed apps are not allowed to ask for one. Remove those apps in Finder, then use Mac Sweeper for the leftovers.</p>
+        </details>
+
+        <details>
+          <summary>Does Mac Sweeper delete things permanently?</summary>
+          <p>No. It moves items to the Trash. Empty the Trash when you want the space back.</p>
+        </details>
+
+        <details>
+          <summary>How do I get something back?</summary>
+          <p>Open the Trash, right-click the item and choose Put Back.</p>
+        </details>
+
+        <details>
+          <summary>Mac Sweeper found nothing, or less than I expected.</summary>
+          <p>Check that you chose the folder named Library inside your home folder, not another folder. Some apps keep files outside your Library, in places a sandboxed app cannot reach, so a few leftovers may remain.</p>
+        </details>
+
+        <details>
+          <summary>Does Mac Sweeper collect my data?</summary>
+          <p>No. Everything happens on your Mac. Read the <a href="privacy.html">privacy policy</a>.</p>
+        </details>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span class="copy">&copy; 2026 Your Name</span>
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+    </footer>
+  </div>
+</body>
+</html>
